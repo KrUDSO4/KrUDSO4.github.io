@@ -1,3 +1,47 @@
+function open_menu() {
+  var x, m;
+  m = (document.getElementById("leftmenu") || document.getElementById("sidenav"));
+  if (m.style.display == "block") {
+    close_menu();
+  } else { 
+    m.style.display = "block";
+    if (document.getElementsByClassName) {
+      x = document.getElementsByClassName("chapter")
+      for (i = 0; i < x.length; i++) {
+        x[i].style.visibility = "hidden";
+      }
+      x = document.getElementsByClassName("nav")
+      for (i = 0; i < x.length; i++) {
+        x[i].style.visibility = "hidden";
+      }
+      x = document.getElementsByClassName("sharethis")
+      for (i = 0; i < x.length; i++) {
+        x[i].style.visibility = "hidden";
+      }
+    }
+    fix_sidemenu();
+  }
+}
+function close_menu() {
+  var m;
+  m = (document.getElementById("leftmenu") || document.getElementById("sidenav"));
+  m.style.display = "none";  
+  if (document.getElementsByClassName) {
+    x = document.getElementsByClassName("chapter")
+    for (i = 0; i < x.length; i++) {
+      x[i].style.visibility = "visible";
+    }
+    x = document.getElementsByClassName("nav")
+    for (i = 0; i < x.length; i++) {
+      x[i].style.visibility = "visible";
+    }
+    x = document.getElementsByClassName("sharethis")
+    for (i = 0; i < x.length; i++) {
+      x[i].style.visibility = "visible";
+    }            
+  }
+}
+
 if (window.addEventListener) {
   window.addEventListener("scroll", function () {fix_sidemenu(); });
   window.addEventListener("resize", function () {fix_sidemenu(); });  
@@ -113,23 +157,4 @@ function scrolltop() {
     top = document.documentElement.scrollTop;
   }
   return top;
-}
-function close_menu() {
-  var m;
-  m = (document.getElementById("leftmenu") || document.getElementById("sidenav"));
-  m.style.display = "none";  
-  if (document.getElementsByClassName) {
-    x = document.getElementsByClassName("chapter")
-    for (i = 0; i < x.length; i++) {
-      x[i].style.visibility = "visible";
-    }
-    x = document.getElementsByClassName("nav")
-    for (i = 0; i < x.length; i++) {
-      x[i].style.visibility = "visible";
-    }
-    x = document.getElementsByClassName("sharethis")
-    for (i = 0; i < x.length; i++) {
-      x[i].style.visibility = "visible";
-    }            
-  }
 }

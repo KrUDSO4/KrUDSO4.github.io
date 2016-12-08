@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<title>MMCB Web Page</title>
+
+
+
+<link rel="icon" href="images/logo.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/mmcb.css">
+<link rel="stylesheet" type="text/css" href="css/stdmmcb.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawpubyearcol);
+
+function drawpubyearcol() {
+       var data = google.visualization.arrayToDataTable([
+        ['year', 'total publications', 'IF>?? publications',{role: 'annotation' } ],
+        ['2011', 12, 3, ''],
+        ['2012', 45, 17, ''],
+        ['2013', 36, 24, ''],
+      ]);
+	  
+	   var options = {
+        width: 800,
+        height: 350,
+		legend: { 
+			position: 'top', 
+			alignment: 'center',
+			maxLines: 3 
+		},
+		chart: {
+          title: 'Total Publications and High Impact Factor Publications Throughout the Year',
+        },
+		hAxis: {
+          title: 'Year',
+        },
+	  };
+	  var material = new google.charts.Bar(document.getElementById('pubcol_div'));
+      material.draw(data, options);
+	}
+</script>
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawpubfieldpie);
+      function drawpubfieldpie() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['field', 'number of publications'],
+          ['development', 11],
+          ['reproduction', 2],
+          ['metabolism', 2],
+          ['circulation', 2],
+          ['cancer', 7]
+        ]);
+		
+		var options = {
+		legend: { 
+			position: 'top', 
+			alignment: 'center',
+			maxLines: 3 
+		},
+			width: 350,
+			height: 400,
+			title: 'Publications of Different Fields',
+			is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pubfieldpie_div'));
+
+        chart.draw(data, options);
+      }
+</script>
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawpubifpie);
+      function drawpubifpie() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['IF', 'number of publications'],
+          ['IF>10', 11],
+          ['IF:8-10', 2],
+          ['IF:6-8', 2],
+          ['IF:4-6', 2],
+          ['IF<4', 7]
+        ]);
+		
+		var options = {
+		legend: { 
+			position: 'top', 
+			alignment: 'center',
+			maxLines: 3 
+		},
+			width: 350,
+			height: 400,
+			title: 'Publications of Different IF',
+			is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pubifpie_div'));
+
+        chart.draw(data, options);
+      }
+</script>
+</head>
+
+<body style="position: relative; min-height: 100%; top: 0px;">
+	<div class='MMCB-container top'>
+	<a class='MMCB-logo' href='index.html'>MMCB<span class='dotcom'>.nju.edu.cn</span></a>
+	<div class='MMCB-right toptext MMCB-wide'>THE ... Lab</div>
+</div>
+<div class="MMCB-navbar MMCB-card-2 MMCB-slim topnav" id="topnav" style="position: relative; top: 0px;">
+	<div style="overflow:auto;">
+		<div style="float:left;width:50%;overflow:hidden;height:44px">
+			<a href="javascript:void(0);" class="topnav-localicons w3-hide-large w3-left" onclick="open_menu()" title="Menu">☰</a>
+			<a href="index.html" class="topnav-icons fa fa-home MMCB-left" title="Home"></a>
+			<a href="research.html" class="MMCB-hide-small" title="Research">Research</a>
+			<a href="ourTeam.html" class="MMCB-hide-small" title="Our Team">Our Team</a>
+			<a href="publication.html" class="active" title="Publication">Publication</a>
+			<a href="news.html" class="MMCB-hide-small" title="News">News</a>
+			<a href="nju.html" class="MMCB-hide-small" title="NJU<">NJU</a>
+			<a href="aboutUs.html" class="MMCB-hide-small" title="About US">About US</a>
+		</div>
+		<div class="MMCB-hide-small" style="float:right;width:30%;overflow:hidden;height:44px;">
+			<a id="topnavbtn_tutorials" href="javascript:void(0);" onclick="MMCB_open_nav(&quot;tutorials&quot;)" title="Regulations">
+				Regulations 
+				<i class="fa fa-caret-down" style="display: inline;"></i>
+				<i class="fa fa-caret-up" style="display:none"></i>
+			</a>
+			<a id="topnavbtn_references" href="javascript:void(0);" onclick="MMCB_open_nav(&quot;references&quot;)" title="Resources">
+				Resources 
+				<i class="fa fa-caret-down" style="display: inline;"></i>
+				<i class="fa fa-caret-up" style="display:none"></i>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="MMCB-sidenav MMCB-collapse MMCB-slim" id="sidenav" style="top: 144px; display: block;">
+	<div id="leftmenuinner" style="padding-top: 0px;">
+		<div class="MMCB-white" id="leftmenuinnerinner">
+				<h2 class="left"><a href="#overview">Overview</a></h2>
+				<br>
+				<h2 class="left"><a href="#licj">2016</a></h2>
+				<br>
+				<h2 class="left"><a href="#licj">2015</a></h2>
+				<br>
+				<h2 class="left"><a href="#licj">2014</a></h2>
+				<br>
+				<h2 class="left"><a href="#licj">2013</a></h2>
+				<br>
+				<h2 class="left"><a href="#licj">2012</a></h2>
+				<br>
+				<h2 class="left"><a href="#licj">2011</a></h2>
+			<br>
+		</div>
+	</div>
+</div>
+<div class="MMCB-main MMCB-khaki" id="belowtopnav" style="margin-left: 220px; padding-top: 44px;">
+	<div class="MMCB-row MMCB-light-gray">
+		<div class="MMCB-col l10 m12" id="main">
+			<div class="MMCB-pub" >
+				<h2 id="overview">Publications Overview</h2>
+				<div class="inlineblock">
+					<div id="pubcol_div"></div>
+				</div>
+				<div>
+					<div class="inlineblock">
+						<div id="pubfieldpie_div"></div>
+					</div>
+					<div class="inlineblock">
+						<div id="pubifpie_div"></div>
+					</div>
+				</div>
+			</div>
+			<div class="MMCB-pub" >
+				<h2 id="overview">Publications of 2016</h2>
+			</div>
+				<div class="MMCB-student" >
+				<h5 class="studentname">Zhong Chen</h5>
+				<img class="img-responsive" src="images/team/ss.jpg">
+				<p>E-mail: 
+					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+				</P>
+				</div>
+				<div class="MMCB-student" >
+				<h5 class="studentname">Zhong Chen</h5>
+				<img class="img-responsive" src="images/team/ss1.jpg">
+				<p>E-mail: 
+					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+				</P>
+				</div>
+				<div class="MMCB-student" >
+				<h5 class="studentname">Zhong Chen</h5>
+				<img class="img-responsive" src="images/team/ss2.jpg">
+				<p>E-mail: 
+					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+				</P>
+				</div>
+				<div class="MMCB-student" >
+				<h5 class="studentname">Zhong Chen</h5>
+				<img class="img-responsive" src="images/team/ss3.jpg">
+				<p>E-mail: 
+					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+				</P>
+				</div>
+				<div class="MMCB-student" >
+				<h5 class="studentname">Zhong Chen</h5>
+				<img class="img-responsive" src="images/team/ss4.jpg">
+				<p>E-mail: 
+					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+				</P>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="javascript/test.js"></script>
+</body>
+</html>
