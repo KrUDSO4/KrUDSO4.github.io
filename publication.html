@@ -8,6 +8,7 @@
 
 <link rel="icon" href="images/logo.png" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="css/mmcb.css">
+<link rel="stylesheet" type="text/css" href="css/cardfl.css">
 <link rel="stylesheet" type="text/css" href="css/stdmmcb.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -19,9 +20,15 @@ google.charts.setOnLoadCallback(drawpubyearcol);
 function drawpubyearcol() {
        var data = google.visualization.arrayToDataTable([
         ['year', 'total publications', 'IF>?? publications',{role: 'annotation' } ],
-        ['2011', 12, 3, ''],
-        ['2012', 45, 17, ''],
-        ['2013', 36, 24, ''],
+        ['2008', 4, 3, ''],
+        ['2009', 3, 3, ''],
+        ['2010', 6, 3, ''],
+		['2011', 6, 3, ''],
+		['2012', 1, 1, ''],
+		['2013', 5, 4, ''],
+		['2014', 2, 2, ''],
+		['2015', 8, 8, ''],
+		['2016', 5, 5, ''],
       ]);
 	  
 	   var options = {
@@ -33,10 +40,11 @@ function drawpubyearcol() {
 			maxLines: 3 
 		},
 		chart: {
-          title: 'Total Publications and High Impact Factor Publications Throughout the Year',
+          title: 'Yearly Publications: Total and High Impact Factor Ones',
         },
 		hAxis: {
           title: 'Year',
+		  viewWindowMode: 'pretty',
         },
 	  };
 	  var material = new google.charts.Bar(document.getElementById('pubcol_div'));
@@ -64,8 +72,8 @@ function drawpubyearcol() {
 			alignment: 'center',
 			maxLines: 3 
 		},
-			width: 350,
-			height: 400,
+			width: 400,
+			height: 480,
 			title: 'Publications of Different Fields',
 			is3D: true,
         };
@@ -96,8 +104,8 @@ function drawpubyearcol() {
 			alignment: 'center',
 			maxLines: 3 
 		},
-			width: 350,
-			height: 400,
+			width: 400,
+			height: 480,
 			title: 'Publications of Different IF',
 			is3D: true,
         };
@@ -110,7 +118,7 @@ function drawpubyearcol() {
 </head>
 
 <body style="position: relative; min-height: 100%; top: 0px;">
-	<div class='MMCB-container top'>
+<div class='MMCB-container top'>
 	<a class='MMCB-logo' href='index.html'>MMCB<span class='dotcom'>.nju.edu.cn</span></a>
 	<div class='MMCB-right toptext MMCB-wide'>THE ... Lab</div>
 </div>
@@ -162,13 +170,14 @@ function drawpubyearcol() {
 </div>
 <div class="MMCB-main MMCB-khaki" id="belowtopnav" style="margin-left: 220px; padding-top: 44px;">
 	<div class="MMCB-row MMCB-light-gray">
-		<div class="MMCB-col l10 m12" id="main">
-			<div class="MMCB-pub" >
+		<div class="MMCB-col m12" id="main">
+			<div class="MMCB-pub">
+				<div style="resize: both; overflow: auto;">
 				<h2 id="overview">Publications Overview</h2>
 				<div class="inlineblock">
 					<div id="pubcol_div"></div>
 				</div>
-				<div>
+				<div class="inlineblock">
 					<div class="inlineblock">
 						<div id="pubfieldpie_div"></div>
 					</div>
@@ -176,44 +185,72 @@ function drawpubyearcol() {
 						<div id="pubifpie_div"></div>
 					</div>
 				</div>
+				</div>
 			</div>
-			<div class="MMCB-pub" >
-				<h2 id="overview">Publications of 2016</h2>
-			</div>
-				<div class="MMCB-student" >
-				<h5 class="studentname">Zhong Chen</h5>
-				<img class="img-responsive" src="images/team/ss.jpg">
-				<p>E-mail: 
-					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
-				</P>
+				
+				<div class="flip-container MMCB-pdf" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper MMCB-pubcard">
+						<div class="front">
+							<div class="MMCB-pubcardfront" >
+								<h5 class="studentname">Zhong Chen</h5>
+								<img class="img-responsive" src="images/team/ss.jpg">
+								<p>E-mail: 
+								<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+								</P>
+							</div>
+						</div>
+						<div class="back">
+							<a href="pdf/jprab27.pdf" target="_blank"><img class="img-pdf" src="images/pdf/jprab27.jpg"></a>
+						</div>
+					</div>
 				</div>
-				<div class="MMCB-student" >
-				<h5 class="studentname">Zhong Chen</h5>
-				<img class="img-responsive" src="images/team/ss1.jpg">
-				<p>E-mail: 
-					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
-				</P>
+				<div class="flip-container MMCB-pdf" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper MMCB-pubcard">
+						<div class="front">
+							<div class="MMCB-pubcardfront" >
+								<h5 class="studentname">Zhong Chen</h5>
+								<img class="img-responsive" src="images/team/ss.jpg">
+								<p>E-mail: 
+								<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+								</P>
+							</div>
+						</div>
+						<div class="back">
+							<a href="pdf/jprab27.pdf" target="_blank"><img class="img-pdf" src="images/pdf/jprab27.jpg"></a>
+						</div>
+					</div>
 				</div>
-				<div class="MMCB-student" >
-				<h5 class="studentname">Zhong Chen</h5>
-				<img class="img-responsive" src="images/team/ss2.jpg">
-				<p>E-mail: 
-					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
-				</P>
+				<div class="flip-container MMCB-pdf" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper MMCB-pubcard">
+						<div class="front">
+							<div class="MMCB-pubcardfront" >
+								<h5 class="studentname">Zhong Chen</h5>
+								<img class="img-responsive" src="images/team/ss.jpg">
+								<p>E-mail: 
+								<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+								</P>
+							</div>
+						</div>
+						<div class="back">
+							<a href="pdf/jprab27.pdf" target="_blank"><img class="img-pdf" src="images/pdf/jprab27.jpg"></a>
+						</div>
+					</div>
 				</div>
-				<div class="MMCB-student" >
-				<h5 class="studentname">Zhong Chen</h5>
-				<img class="img-responsive" src="images/team/ss3.jpg">
-				<p>E-mail: 
-					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
-				</P>
-				</div>
-				<div class="MMCB-student" >
-				<h5 class="studentname">Zhong Chen</h5>
-				<img class="img-responsive" src="images/team/ss4.jpg">
-				<p>E-mail: 
-					<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
-				</P>
+				<div class="flip-container MMCB-pdf" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper MMCB-pubcard">
+						<div class="front">
+							<div class="MMCB-pubcardfront" >
+								<h5 class="studentname">Zhong Chen</h5>
+								<img class="img-responsive" src="images/team/ss.jpg">
+								<p>E-mail: 
+								<a href="mailto:xuebin@nj.edu.cn">emailaddress</a>
+								</P>
+							</div>
+						</div>
+						<div class="back">
+							<a href="pdf/jprab27.pdf" target="_blank"><img class="img-pdf" src="images/pdf/jprab27.jpg"></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -222,3 +259,5 @@ function drawpubyearcol() {
 <script src="javascript/test.js"></script>
 </body>
 </html>
+
+<div class="text-fadeout-overlay" ontouchstart="this.classList.add('active');" ontouchend="this.classList.remove('active');"></div>

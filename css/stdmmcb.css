@@ -78,7 +78,7 @@ i.fa-caret-down,i.fa-caret-up {
 }
 #sidenav h2 {
  font-size:21px;
- padding-left:16px;
+ padding-left: 0px;
  margin:-4px 0 4px 0;
  width:204px;
 }
@@ -513,7 +513,7 @@ div.tryit_ex h2 {
 	padding:0.01em 16px ;
 	margin:10px 10px 10px 0;
 	height: 400px;
-    width: 277px;
+    width: 250px;
 	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important
 }
 .studentname{
@@ -521,7 +521,7 @@ div.tryit_ex h2 {
 }
 .inlineblock{
 	display: inline-block;
-	margin:5px 30px 5px 20px
+	margin:5px 5px 5px 5px
 }
 .bkgimg{
 	background-image: url("team.png");
@@ -532,7 +532,7 @@ div.tryit_ex h2 {
 .appointment,.staff-member .primary-appointment{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;display:block}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -622,4 +622,44 @@ div.tryit_ex h2 {
 	padding:0.01em 16px ;
 	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 	margin:20px 0
+}
+.img-student {
+ max-width:240px;
+ max-height:280px;
+}
+.img-teacher {
+	max-height:400px
+}
+.img-all {
+	max-width: 100%;
+    margin: auto;
+}
+.toright {
+	position: relative;
+	left: 20px;
+}
+.MMCB-pubcard {
+	display: inline-block;
+	background-color:#ffffff;
+	padding:0;
+	margin:0;
+	height: 400px;
+    width: 250px;
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important
+}
+.MMCB-pubcardfront {
+	padding:0.01em 16px ;
+}
+.img-pdf{
+	 position: relative;
+	 top: 25px;
+	 left: 85px;
+}
+.MMCB-pdf {
+	display: inline-block;
+	background-color: transparent;
+	padding:0;
+	margin:0;
+	height: 420px;
+    width: 270px;
 }
